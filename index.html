@@ -100,6 +100,8 @@
           </main>
           <label>Set an alarm:</label>
           <input type="time" id="alarm" name="alarm">
+
+          <h3 id="alarmRinging"></h3>   
       </div>
  
  
@@ -125,13 +127,14 @@
         let alarmMins= alarm.value.split(":")[1];  
 
         if (d.getHours()==alarmHour&& d.getMinutes()==alarmMins){
-             console.log("alarm is ringing");
+              alarmRinging.innerHTML="Alarm is Ringing";
              let audio=new Audio ("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
              audio.play();
-             setTimeout(function() { audtio.pause(); }, 60000);
+             setTimeout(function() { audio.pause(); }, 60000);
         }
         };
        setInterval(updateTime,1000);
+       
 
         // let alarmHour= alarm.value.split(": ")[0];  // alarm.value format -> hour:min
         // let alarmMins= alarm.value.split(": ")[1];  
