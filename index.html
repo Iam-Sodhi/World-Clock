@@ -123,8 +123,7 @@
       
         let alarmHour= alarm.value.split(":")[0];  // alarm.value format -> hour:min
         let alarmMins= alarm.value.split(":")[1];  
-        console.log(alarmHour,d.getHours())
-        console.log(alarmMins,d.getMinutes())
+
         if (d.getHours()==alarmHour&& d.getMinutes()==alarmMins){
              console.log("alarm is ringing");
              let audio=new Audio ("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
